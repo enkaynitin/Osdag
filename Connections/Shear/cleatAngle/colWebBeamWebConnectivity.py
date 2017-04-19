@@ -28,7 +28,7 @@ class ColWebBeamWeb(object):
         self.create_beam_geometry()
         self.create_angle_geometry()
         self.create_nut_bolt_array()
-        
+
         # Call for create_model
         self.columnModel = self.column.create_model()
         self.beamModel = self.beam.create_model()

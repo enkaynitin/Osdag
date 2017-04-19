@@ -119,7 +119,7 @@ class BeamWebBeamWeb(object):
     def get_models(self):
         '''Returning 3D models
         '''
-        return [self.columnModel, self.beamModel, self.angleModel] + self.nut_bolt_array.get_model()
+        return [self.columnModel, self.beamModel, self.angleModel] + self.nut_bolt_array.get_models()
              
     def get_nutboltmodels(self):
         
