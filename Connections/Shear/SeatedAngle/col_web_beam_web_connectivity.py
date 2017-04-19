@@ -151,15 +151,15 @@ class ColWebBeamWeb(object):
     def getModels(self):
         '''Returning 3D models
         '''
-        return [self.columnModel,self.angleModel,self.beamModel,self.topclipangleModel] + self.nutBoltArray.getModels()
+        return [self.columnModel,self.angleModel,self.beamModel,self.topclipangleModel] + self.nut_bolt_array.getModels()
         
                 
     def get_nutboltmodels(self):
-        return self.nutBoltArray.getModels()
+        return self.nut_bolt_array.getModels()
     
     def get_beamModel(self):
         finalbeam = self.beamModel
-        nutBoltlist = self.nutBoltArray.get_beam_bolts()
+        nutBoltlist = self.nut_bolt_array.get_beam_bolts()
         for bolt in nutBoltlist:
             finalbeam = BRepAlgoAPI_Cut(finalbeam,bolt).Shape()
         return finalbeam
@@ -170,7 +170,7 @@ class ColWebBeamWeb(object):
     
     def get_columnModel(self):
         finalcol = self.columnModel
-        nutBoltlist = self.nutBoltArray.get_column_bolts()
+        nutBoltlist = self.nut_bolt_array.get_column_bolts()
         for bolt in nutBoltlist:
             finalcol = BRepAlgoAPI_Cut(finalcol,bolt).Shape()
         return finalcol
