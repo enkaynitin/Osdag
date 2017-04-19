@@ -629,13 +629,12 @@ class MainController(QMainWindow):
             pixmap.scaledToWidth(50)
             self.ui.lbl_connectivity.setPixmap(pixmap)
             # self.ui.lbl_connectivity.show()
-        elif (loc == "Column web-Beam web"):
+        elif (loc == "Column web-Beam flange"):
             picmap = QPixmap(":/newPrefix/images/colW3.png")
             picmap.scaledToHeight(60)
             picmap.scaledToWidth(50)
             self.ui.lbl_connectivity.setPixmap(picmap)
         elif loc == "Column flange-Beam flange":
-            # TODO change the pixmap as per seated angle connectivity
             pixmap = QPixmap(":/newPrefix/images/colF2.png")
             pixmap.scaledToHeight(60)
             pixmap.scaledToWidth(50)
